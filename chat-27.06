@@ -1,0 +1,615 @@
+16:25
+<header>
+        <h1 class="main-title">𑂍𑂶𑂟𑂱𑂨𑂰</h1>
+    </header>
+
+    <hr>
+
+    <nav class="navigation">
+        <a href="https://kaithiya.neocities.org" class="nav-link">𑂧𑂳𑂎𑂣𑃂𑂭𑂹𑂘</a>
+        <span class="nav-separator">•</span>
+        <a href="https://kaithiya.neocities.org/resources" class="nav-link">𑂮𑂁𑂮𑂰𑂡𑂢</a>
+        <span class="nav-separator">•</span>
+        <a href="https://kaithiya.neocities.org/Literature.pdf" class="nav-link">𑂮𑂰𑂯𑂱𑂞𑂹𑂨</a>
+    </nav>
+
+    <hr>
+
+    <main class="content-section">
+        <header>
+            <h2 class="section-title">
+                <span class="decorative-symbol">❈</span>
+                 𑂍𑂹𑂭𑂩 
+                𑂣𑂩𑂱𑂒𑂨
+                                <span class="section-subtitle">𑂌𑂮𑂰𑂤𑂺 𑂇𑂧𑂩</span>
+            </h2>
+        </header>
+Hover over a message to pin it
+keep
+16:27
+/* Header styles */
+        .main-title {
+            text-align: center;
+            font-size: 60px;
+            font-weight: bold;
+            margin: 20px 0;
+        }
+
+        /* Navigation styles */
+        .navigation {
+            text-align: center;
+            font-size: 16px;
+            margin: 20px 0;
+        }
+
+        .nav-link {
+            color: rgb(55, 125, 255);
+            text-decoration: none;
+            transition: color 0.2s, text-decoration 0.2s;
+            font-family: "Noto Sans Kaithi", sans-serif;
+            font-size: 16px;
+        }
+
+        .nav-link:hover {
+            text-decoration: underline;
+        }
+
+        .nav-separator {
+            color: rgb(12, 12, 12);
+            margin: 0 5px;
+        }
+16:32
+kaithiya.neocities.org
+
+TheGiftOfTheKings
+16:45
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport"
+content="width=device-width, initial-scale=1.0">
+
+<title>VillageConnect</title>
+
+<link rel="stylesheet" href="style.css">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+</head>
+
+<body>
+
+<header>
+
+<div class="logo">
+
+<i class="fa-solid fa-tree"></i>
+
+VillageConnect
+
+</div>
+
+<nav>
+
+<a href="sample.html">Home</a>
+
+<a href="pages/news.html">News</a>
+
+<a href="pages/calendar.html">Calendar</a>
+
+<a href="pages/about.html">About</a>
+
+<a href="pages/contact.html">Contact</a>
+
+</nav>
+
+</header>
+
+<section class="hero">
+
+<h1>Connecting Every Village Together</h1>
+
+<p>
+A digital Banyan Tree where every voice matters.
+</p>
+
+<button>Join Community</button>
+
+</section>
+
+<div class="ticker">
+
+<div class="ticker-text">
+
+🚜 Farmer's Market Sunday |
+🌳 Tree Plantation Drive |
+🏏 Cricket Tournament |
+💧 Water Supply Notice |
+🎉 Annual Village Fair
+
+</div>
+
+</div>
+
+<section class="cards">
+
+<div class="card">
+
+<i class="fa-solid fa-newspaper"></i>
+
+<h2>Village News</h2>
+
+<p>
+Daily local announcements.
+</p>
+
+</div>
+
+<div class="card">
+
+<i class="fa-solid fa-calendar-days"></i>
+
+<h2>Community Calendar</h2>
+
+<p>
+Festivals, fairs and meetings.
+</p>
+
+</div>
+
+<div class="card">
+
+<i class="fa-solid fa-microphone"></i>
+
+<h2>Voice-to-Text</h2>
+
+<p>
+Speak your thoughts instead of typing.
+</p>
+
+<button onclick="startSpeech()">
+
+Speak
+
+</button>
+
+<p id="speechOutput"></p>
+
+</div>
+
+<div class="card">
+
+<i class="fa-solid fa-users"></i>
+
+<h2>Community Forum</h2>
+
+<p>
+
+Share ideas with neighbours.
+
+</p>
+
+</div>
+
+</section>
+
+<footer>
+
+© 2026 VillageConnect
+
+</footer>
+
+<script src="script.js"></script>
+
+</body>
+
+</html
+*{
+
+margin:0;
+padding:0;
+box-sizing:border-box;
+
+}
+
+body{
+
+font-family:Arial;
+background:#F7F4EA;
+
+}
+
+header{
+
+display:flex;
+justify-content:space-between;
+align-items:center;
+
+padding:20px 50px;
+
+background:#556B2F;
+
+color:white;
+
+}
+
+nav a{
+
+color:white;
+
+margin-left:20px;
+
+text-decoration:none;
+
+}
+
+.hero{
+
+text-align:center;
+
+padding:90px 20px;
+
+background:linear-gradient(#C96E48,#D8B25C);
+
+color:white;
+
+}
+
+.hero button{
+
+margin-top:20px;
+
+padding:12px 28px;
+
+border:none;
+
+background:#556B2F;
+
+color:white;
+
+cursor:pointer;
+
+border-radius:8px;
+
+}
+
+.ticker{
+
+overflow:hidden;
+
+background:#7C4A2D;
+
+color:white;
+
+padding:12px;
+
+white-space:nowrap;
+
+}
+
+.ticker-text{
+
+display:inline-block;
+
+padding-left:100%;
+
+animation:move 18s linear infinite;
+
+}
+
+@keyframes move{
+
+0%{
+
+transform:translateX(0);
+
+}
+
+100%{
+
+transform:translateX(-100%);
+
+}
+
+}
+
+.cards{
+
+display:grid;
+
+grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+
+gap:30px;
+
+padding:40px;
+
+}
+
+.card{
+
+background:white;
+
+padding:25px;
+
+text-align:center;
+
+border-radius:10px;
+
+box-shadow:0 0 10px rgba(0,0,0,.15);
+
+}
+
+.card i{
+
+font-size:45px;
+
+margin-bottom:15px;
+
+color:#556B2F;
+
+}
+
+footer{
+
+background:#556B2F;
+
+color:white;
+
+text-align:center;
+
+padding:20px;
+
+}
+function startSpeech(){
+
+const recognition =
+new(window.SpeechRecognition||
+window.webkitSpeechRecognition)();
+
+recognition.lang="en-IN";
+
+recognition.start();
+
+recognition.onresult=function(event){
+
+document.getElementById("speechOutput").innerHTML=
+
+event.results[0][0].transcript;
+
+}
+
+}
+17:10
+https://tafkeer-sirau.github.io/banyan/sample.html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VillageConnect</title>
+    
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+</head>
+
+<body>
+
+    <header>
+        <div class="logo">
+            <i class="fa-solid fa-tree"></i>
+            VillageConnect
+        </div>
+        <nav>
+            <a href="sample.html">Home</a>
+            <a href="news.html">News</a>
+            <a href="calendar.html">Calendar</a>
+            <a href="about.html">About</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <h1>Connecting Every Village Together</h1>
+        <p>A digital Banyan Tree where every voice matters.</p>
+        <button>Join Community</button>
+    </section>
+
+    <div class="ticker">
+        <div class="ticker-text">
+            Farmer's Market Sunday | Tree Plantation Drive | Cricket Tournament | Water Supply Notice | Annual Village Fair
+        </div>
+    </div>
+
+    <section class="cards">
+        <div class="card">
+            <i class="fa-solid fa-newspaper"></i>
+            <h2>Village News</h2>
+            <p>Daily local announcements.</p>
+        </div>
+
+        <div class="card">
+            <i class="fa-solid fa-calendar-days"></i>
+            <h2>Community Calendar</h2>
+            <p>Festivals, fairs and meetings.</p>
+        </div>
+
+        <div class="card">
+            <i class="fa-solid fa-microphone"></i>
+            <h2>Voice-to-Text</h2>
+            <p>Speak your thoughts instead of typing.</p>
+            <button onclick="startSpeech()">Speak</button>
+            <p id="speechOutput"></p>
+        </div>
+
+        <div class="card">
+            <i class="fa-solid fa-users"></i>
+            <h2>Community Forum</h2>
+            <p>Share ideas with neighbours.</p>
+        </div>
+    </section>
+
+    <footer>
+        &copy; 2026 VillageConnect
+    </footer>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
+* {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #F7F4EA;
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 50px;
+            background: #556B2F;
+            color: white;
+        }
+
+        nav a {
+            color: white;
+            margin-left: 20px;
+            text-decoration: none;
+        }
+
+        .hero {
+            text-align: center;
+            padding: 90px 20px;
+            background: #D8B25C;
+            color: white;
+        }
+
+        .hero button {
+            margin-top: 20px;
+            padding: 12px 28px;
+            border: none;
+            background: #556B2F;
+            color: white;
+            cursor: pointer;
+            border-radius: 8px;
+        }
+
+        .ticker {
+            overflow: hidden;
+            background: #7C4A2D;
+            color: white;
+            padding: 12px;
+            white-space: nowrap;
+        }
+
+        .ticker-text {
+            display: inline-block;
+            padding-left: 100%;
+            animation: move 18s linear infinite;
+        }
+
+        @keyframes move {
+            0% {
+                transform: translateX(0);
+            }
+            100% {
+                transform: translateX(-100%);
+            }
+        }
+
+        .cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 30px;
+            padding: 40px;
+        }
+
+        .card {
+            background: white;
+            padding: 25px;
+            text-align: center;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, .15);
+        }
+
+        .card i {
+            font-size: 45px;
+            margin-bottom: 15px;
+            color: #556B2F;
+        }
+
+        footer {
+            background: #556B2F;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+17:13
+https://www.htmlcommentbox.com/
+17:18
+https://www.litedb.org/
+17:44
+async function cryptoHash(message) {
+    // 1. Encode the string as raw UTF-8 bytes
+    const msgBuffer = new TextEncoder().encode(message);                    
+
+    // 2. Generate a SHA-256 hash buffer using native crypto
+    const hashBuffer = await crypto.subtle.digest('SHA-256', msgBuffer);
+    
+    // 3. Convert the ArrayBuffer to a readable Hexadecimal string
+    const hashArray = Array.from(new Uint8Array(hashBuffer));                     
+    const hashHex = hashArray.map(b => b.toString(16).padStart(2, '0')).join('');
+    
+    return hashHex;
+}
+
+// Example Usage (Returns a Promise):
+cryptoHash("hello").then(hash => console.log(hash)); 
+// Output: "2cf24dba5fb0a30e26e83b2ac5b9e29e1b161e5c1fa7425e73043362938b9824"
+17:51
+function simpleHash(str) {
+
+    let hash = 5381; // Initial prime seed value
+
+    
+
+    for (let i = 0; i < str.length; i++) {
+
+        // Equivalent to: hash = hash * 33 + charCode
+
+        hash = ((hash << 5) + hash) + str.charCodeAt(i);
+
+        hash |= 0; // Convert to a 32-bit signed integer
+
+    }
+
+    
+
+    // Convert to an unsigned 32-bit integer and output as a base-36 string
+
+    return (hash >>> 0).toString(36);
+
+}
+
+
+
+// Example Usage:
+
+console.log(simpleHash("hello")); // Output: "4vk3a"
+
+console.log(simpleHash("world")); // Output: "58mqu"
+
+TheGiftOfTheKings
+17:53
+Promise[[Prototype]]: Promise[[PromiseState]]: "fulfilled"[[PromiseResult]]: "a591a6d40bf420404a011733cfb7b190d62c65bf0bcda32b57b277d9ad9f146e"\
+Hello World
