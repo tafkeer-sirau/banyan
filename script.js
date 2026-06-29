@@ -1,3 +1,4 @@
+console.log("script.js loaded");
 const TICKER = document.querySelector(".ticker-text");
 
 function loadNews() {
