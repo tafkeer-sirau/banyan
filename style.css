@@ -26,8 +26,12 @@
             color: white;
             margin-left: 20px;
             text-decoration: none;
+
         }
 
+nav a:hover{
+    background:#faf8f2;
+}
        a { 
             color: white; 
        }
