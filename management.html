@@ -118,6 +118,16 @@
     padding:10px;
         }
     </style>
-        <script src="script.js"></script>
+        <script>
+          function loadNews() {
+  const news = localStorage.getItem("villageNews");
+
+  if (news && TICKER) {
+    TICKER.innerText = news;
+  }
+}
+
+loadNews();
+        </script>
   </body>
 </html>
