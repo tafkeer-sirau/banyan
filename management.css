@@ -1,0 +1,21 @@
+.news {
+  text-align: center;
+  padding: 40px;
+}
+#news_b {
+  background: #556b2f;
+  color: white;
+  padding: 15px;
+}
+#spt {
+  background: #556b2f;
+  color: white;
+  padding: 15px;
+}
+textarea {
+  width: 50%;
+  height: 80px;
+  border: 1px solid #ddd;
+  vertical-align: top;
+  padding: 10px;
+}
