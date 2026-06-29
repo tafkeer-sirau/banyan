@@ -3,11 +3,13 @@ const TEXT_AREA = document.getElementById("news");
 const TICKER = document.querySelector(".ticker-text");
 const UPDATE = document.getElementById("news_b");
 
+const news = localStorage.getItem("villageNews");
+
 let isRecording = false;
 let speechObj;
 let finalTranscript = "";
 
-TEXT_AREA.value = localStorage.getItem("villageNews");
+TEXT_AREA.value = news;
 
 const SpeechRecognition =
   window.SpeechRecognition || window.webkitSpeechRecognition;
