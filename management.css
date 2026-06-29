@@ -1,0 +1,20 @@
+#news {
+  color: green;
+  background: orange;
+}
+
+#news_b {
+  color: green;
+  background-color: orange;
+  text-align: center;
+}
+
+.news {
+  text-align: center;
+}
+
+#spt {
+  color: green;
+  background-color: orange;
+  text-align: center;
+}
