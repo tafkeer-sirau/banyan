@@ -11,31 +11,8 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
     />
-  </head>
 
-  <body>
-    <header>
-      <div class="logo">
-        <i class="fa-solid fa-tree"></i>
-        Village Connect
-      </div>
-      <nav>
-        <a href="sample.html">Home</a>
-        <a href="calendar.html">Calendar</a>
-      </nav>
-    </header>
-    <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
-    <h1 style="text-align: center; color: Red">Management Site</h1>
-    <div class="news">
-      <h2 style="text-align: center; color: orange">Update News</h2>
-      <textarea id="news" rows="4" cols="50"></textarea>
-      <br />
-      <span><button id="spt">Speech to Text</button> </span
-      ><button id="news_b">Update</button>
-    </div>
-    <script src="management.js"></script>
-
-      <script>
+          <script>
         // 1. This is the pre-computed SHA-256 hash of the passcode "mySecret123"
         // Even if someone views your page source, they only see this string.
         const STORED_HASH = "03ac674216f3e15c761ee1a5e255f067953623c8b388b4459e13f978d7c846f4";
@@ -80,5 +57,28 @@
         // Run the authentication
         window.onload = authenticateUser;
     </script>
+  </head>
+
+  <body>
+    <header>
+      <div class="logo">
+        <i class="fa-solid fa-tree"></i>
+        Village Connect
+      </div>
+      <nav>
+        <a href="sample.html">Home</a>
+        <a href="calendar.html">Calendar</a>
+      </nav>
+    </header>
+    <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+    <h1 style="text-align: center; color: Red">Management Site</h1>
+    <div class="news">
+      <h2 style="text-align: center; color: orange">Update News</h2>
+      <textarea id="news" rows="4" cols="50"></textarea>
+      <br />
+      <span><button id="spt">Speech to Text</button> </span
+      ><button id="news_b">Update</button>
+    </div>
+    <script src="management.js"></script>
   </body>
 </html>
