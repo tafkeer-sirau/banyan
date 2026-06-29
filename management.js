@@ -5,8 +5,8 @@ const UPDATE = document.getElementById("news_b");
 
 const news = localStorage.getItem("villageNews");
 document.addEventListener("DOMContentLoaded", () => {
-    console.log("Page loaded!");
-    TEXT_AREA.value = news; 
+  console.log("Page loaded!");
+  TEXT_AREA.value = news;
 });
 
 let isRecording = false;
