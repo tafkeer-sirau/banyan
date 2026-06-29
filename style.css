@@ -24,7 +24,9 @@
             text-decoration: none;
         }
 
-       a { color: white; }
+       a { 
+            color: white; 
+       }
 
         .hero {
             text-align: center;
