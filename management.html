@@ -13,11 +13,9 @@
     />
 
           <script>
-        // 1. This is the pre-computed SHA-256 hash of the passcode "mySecret123"
-        // Even if someone views your page source, they only see this string.
+        // Hash
         const STORED_HASH = "03ac674216f3e15c761ee1a5e255f067953623c8b388b4459e13f978d7c846f4";
 
-        // Helper function to hash a string using native Web Crypto API
         async function sha256(message) {
             const msgBuffer = new TextEncoder().encode(message);                    
             const hashBuffer = await crypto.subtle.digest('SHA-256', msgBuffer);
@@ -37,13 +35,10 @@
                     break;
                 }
 
-                // 2. Hash the user's input and store it in a variable
                 const hashedInput = await sha256(userInput);
 
-                // 3. Compare the two hashes
                 if (hashedInput === STORED_HASH) {
                     authenticated = true;
-                    // Reveal the page body once authenticated
                     document.documentElement.style.display = "block";
                 } else {
                     alert("Incorrect passcode. Try again.");
@@ -51,10 +46,7 @@
             }
         }
 
-        // Hide the page content immediately before loading it
         document.documentElement.style.display = "none";
-        
-        // Run the authentication
         window.onload = authenticateUser;
     </script>
   </head>
