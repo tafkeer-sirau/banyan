@@ -1,0 +1,92 @@
+
+.calendar-section{
+    padding:40px;
+}
+
+.month-title{
+    text-align:center;
+    color:#556B2F;
+    margin-bottom:25px;
+    font-size:2rem;
+}
+
+table{
+    width:100%;
+    border-collapse:collapse;
+    background:white;
+    box-shadow:0 0 10px rgba(0,0,0,.15);
+}
+
+th{
+    background:#556B2F;
+    color:white;
+    padding:15px;
+}
+
+td{
+    width:14.28%;
+    height:110px;
+    border:1px solid #ddd;
+    vertical-align:top;
+    padding:10px;
+}
+
+.date{
+    width:38px;
+    height:38px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    font-weight:bold;
+    border-radius:50%;
+    color:#444;
+    position:relative;
+}
+
+.has-event{
+    background:#D8B25C;
+    color:white;
+    cursor:pointer;
+    transition:.2s;
+}
+
+.has-event:hover{
+    background:#c89d39;
+}
+
+/* Tooltip */
+
+.tooltip{
+    position:absolute;
+    top:48px;
+    left:50%;
+    transform:translateX(-50%);
+    width:210px;
+    background:#556B2F;
+    color:white;
+    padding:10px;
+    border-radius:8px;
+    font-size:13px;
+    line-height:1.5;
+    visibility:hidden;
+    opacity:0;
+    transition:.2s;
+    z-index:100;
+    text-align:left;
+    box-shadow:0 4px 10px rgba(0,0,0,.25);
+}
+
+.tooltip strong{
+    display:block;
+    margin-bottom:5px;
+    color:#D8B25C;
+}
+
+.has-event:hover .tooltip{
+    visibility:visible;
+    opacity:1;
+}
+
+td:hover{
+    background:#faf8f2;
+}
