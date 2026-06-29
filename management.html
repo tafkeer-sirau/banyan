@@ -12,122 +12,106 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
     />
 
-          <script>
-        // Hash
-        const STORED_HASH = "03ac674216f3e15c761ee1a5e255f067953623c8b388b4459e13f978d7c846f4";
+    <script>
+      // Hash
+      const STORED_HASH =
+        "fa67b4af01b38188840a1442ffbd05b5bc8cf19f1d4f645af4461a53764dfe8c";
 
-        async function sha256(message) {
-            const msgBuffer = new TextEncoder().encode(message);                    
-            const hashBuffer = await crypto.subtle.digest('SHA-256', msgBuffer);
-            const hashArray = Array.from(new Uint8Array(hashBuffer));
-            return hashArray.map(b => b.toString(16).padStart(2, '0')).join('');
+      async function sha256(message) {
+        const msgBuffer = new TextEncoder().encode(message);
+        const hashBuffer = await crypto.subtle.digest("SHA-256", msgBuffer);
+        const hashArray = Array.from(new Uint8Array(hashBuffer));
+        return hashArray.map((b) => b.toString(16).padStart(2, "0")).join("");
+      }
+
+      async function authenticateUser() {
+        let authenticated = false;
+
+        while (!authenticated) {
+          let userInput = prompt("Please enter the passcode:");
+
+          if (userInput === null) {
+            document.write("<h1>Access Denied</h1>");
+            window.stop();
+            break;
+          }
+
+          const hashedInput = await sha256(userInput);
+
+          if (hashedInput === STORED_HASH) {
+            authenticated = true;
+            document.documentElement.style.display = "block";
+          } else {
+            alert("Incorrect passcode. Try again.");
+          }
         }
+      }
 
-        async function authenticateUser() {
-            let authenticated = false;
-
-            while (!authenticated) {
-                let userInput = prompt("Please enter the passcode:");
-                
-                if (userInput === null) {
-                    document.write("<h1>Access Denied</h1>");
-                    window.stop();
-                    break;
-                }
-
-                const hashedInput = await sha256(userInput);
-
-                if (hashedInput === STORED_HASH) {
-                    authenticated = true;
-                    document.documentElement.style.display = "block";
-                } else {
-                    alert("Incorrect passcode. Try again.");
-                }
-            }
-        }
-
-        document.documentElement.style.display = "none";
-        window.onload = authenticateUser;
+      document.documentElement.style.display = "none";
+      window.onload = authenticateUser;
     </script>
   </head>
 
   <body>
-<header>
-    <div class="logo">
+    <header>
+      <div class="logo">
         <i class="fa-solid fa-tree"></i>
         Village Connect
-    </div>
+      </div>
 
-    <nav>
+      <nav>
         <a href="sample.html">Home</a>
         <a href="calendar.html">Calendar</a>
-    </nav>
-</header>
-<br><br><br>
-<section class="hero">
-    <h1>Management Site</h1>
-    <p>Update the village events and activities.</p>
-</section>
+      </nav>
+    </header>
+    <br /><br /><br />
+    <section class="hero">
+      <h1>Management Site</h1>
+      <p>Update the village events and activities.</p>
+    </section>
 
-    
     <div class="ticker">
       <div class="ticker-text">
         Farmer's Market Sunday | Tree Plantation Drive | Cricket Tournament |
         Water Supply Notice | Annual Village Fair
       </div>
     </div>
-    
+
     <div class="news">
-          <h2 style="text-align:center;
-    color:#556B2F;
-    margin-bottom:25px;
-    font-size:2rem;">Update</h2>
+      <h2
+        style="
+          text-align: center;
+          color: #556b2f;
+          margin-bottom: 25px;
+          font-size: 2rem;
+        "
+      >
+        Update
+      </h2>
       <textarea id="news" rows="8" cols="200"></textarea>
       <br />
-          </div>
-    <div style="text-align:center;">
+    </div>
+    <div style="text-align: center">
       <span><button id="spt">Start Speech</button> </span>
-    <button id="news_b">Update</button>
-    <script src="management.js"></script>
+      <button id="news_b">Update</button>
+      <script src="management.js"></script>
     </div>
 
     <footer>
-    &copy; 2026 Village Connect.
-    <a href="management.html">Management Page</a>
-</footer>
-    <style>
-      .news {
-        text-align:center;
-        padding:40px;
+      &copy; 2026 Village Connect.
+      <a href="management.html">Management Page</a>
+    </footer>
+
+    <script>
+      function loadNews() {
+        const news = localStorage.getItem("villageNews");
+
+        if (news && TICKER) {
+          TICKER.innerText = news;
+        }
       }
-      #news_b {
-    background:#556B2F;
-    color:white;
-    padding:15px;
-        }
-      #spt {
-    background:#556B2F;
-    color:white;
-    padding:15px;
-        }
-      textarea {
-    width:50%;
-    height:80px;
-    border:1px solid #ddd;
-    vertical-align:top;
-    padding:10px;
-        }
-    </style>
-        <script>
-          function loadNews() {
-  const news = localStorage.getItem("villageNews");
 
-  if (news && TICKER) {
-    TICKER.innerText = news;
-  }
-}
-
-loadNews();
-        </script>
+      loadNews();
+    </script>
   </body>
 </html>
