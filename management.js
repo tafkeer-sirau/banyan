@@ -7,6 +7,8 @@ let isRecording = false;
 let speechObj;
 let finalTranscript = "";
 
+TEXT_AREA.value = localStorage.getItem("villageNews");
+
 const SpeechRecognition =
   window.SpeechRecognition || window.webkitSpeechRecognition;
 
