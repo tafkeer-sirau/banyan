@@ -24,6 +24,8 @@
             text-decoration: none;
         }
 
+       a { color: white; }
+
         .hero {
             text-align: center;
             padding: 90px 20px;
