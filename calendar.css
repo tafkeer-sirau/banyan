@@ -1,5 +1,5 @@
 .calendar-section {
-  padding: 40px;
+  padding: 50px;
 }
 
 .month-title {
@@ -57,10 +57,10 @@ td {
 
 .tooltip {
   position: absolute;
-  top: 48px;
+  top: -48px;
   left: 50%;
-  transform: translateX(-50%);
-  width: 210px;
+  transform: translateX(15%);
+  width: 180px;
   background: #556b2f;
   color: white;
   padding: 10px;

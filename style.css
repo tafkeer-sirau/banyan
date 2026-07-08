@@ -30,9 +30,11 @@ nav a {
 
 nav a:hover {
   background: #faf8f2;
+  color: #d8b25c;
 }
 a {
-  color: white;
+  color: #d8b25c;
+  text-decoration:none;
 }
 
 .hero {
@@ -90,8 +92,13 @@ a {
   background: white;
   padding: 25px;
   text-align: center;
+  cursor: pointer;
   border-radius: 10px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
+}
+
+.card:hover {
+  background: #faf8f2;
 }
 
 .card i {

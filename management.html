@@ -6,6 +6,7 @@
     <title>Village Connect</title>
 
     <link rel="stylesheet" href="management.css" />
+    <link rel="stylesheet" href="calendar.css" />
     <link rel="stylesheet" href="style.css" />
     <link
       rel="stylesheet"
@@ -70,12 +71,14 @@
       <p>Update the village events and activities.</p>
     </section>
 
+ <a href="calendar.html" style="color:black;">
     <div class="ticker">
       <div class="ticker-text">
         Farmer's Market Sunday | Tree Plantation Drive | Cricket Tournament |
         Water Supply Notice | Annual Village Fair
       </div>
     </div>
+</a>
 
     <div class="news">
       <h2
@@ -97,9 +100,12 @@
       <script src="management.js"></script>
     </div>
 
-    <footer>
-      &copy; 2026 Village Connect.
-      <a href="management.html">Management Page</a>
+     <footer class="has-event" style="background: #556b2f;">
+      &copy; 2026 VillageConnect.
+      <a href="management.html">Management Page
+	<div class="tooltip">
+                For updating the news
+        </div></a>
     </footer>
 
     <script>
