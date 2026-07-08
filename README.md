@@ -2,7 +2,7 @@
 A social network of sorts for a village.\
 A digital Banyan tree, or the Chaupal underneath it.\
 _Ausaaf Umar & Akshat Bharadwaj_
-/
+<BR>
 * Add login-status local storage
 * Auto-refresh
 * Village-like look/design
