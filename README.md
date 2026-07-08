@@ -6,3 +6,4 @@ _Ausaaf Umar & Akshat Bharadwaj_
 * Add login-status local storage
 * Auto-refresh
 * Village-like look/design
+* Hovering news card highlights ticker
