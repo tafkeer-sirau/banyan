@@ -7,5 +7,5 @@ _Ausaaf Umar, Akshat Bharadwaj & Zeeshan Choudhury_
 * ~Add login-status local storage~
 * ~Auto-refresh~
 * Village-like look/design
-* Hovering news card highlights ticker
+* Hovering news card highlights ticker\
 [Shortened URL](https://bit.ly/vc-banyan)
