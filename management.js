@@ -69,4 +69,6 @@ UPDATE.addEventListener("click", () => {
   localStorage.setItem("villageNews", news);
 
   alert("News updated!");
+window.location.reload();
+
 });

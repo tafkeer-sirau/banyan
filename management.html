@@ -13,44 +13,49 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
     />
 
-    <script>
-      // Hash
-      const STORED_HASH =
-        "fa67b4af01b38188840a1442ffbd05b5bc8cf19f1d4f645af4461a53764dfe8c";
+ <script>
+  // Hash
+  const STORED_HASH =
+    "fa67b4af01b38188840a1442ffbd05b5bc8cf19f1d4f645af4461a53764dfe8c";
 
-      async function sha256(message) {
-        const msgBuffer = new TextEncoder().encode(message);
-        const hashBuffer = await crypto.subtle.digest("SHA-256", msgBuffer);
-        const hashArray = Array.from(new Uint8Array(hashBuffer));
-        return hashArray.map((b) => b.toString(16).padStart(2, "0")).join("");
+  async function sha256(message) {
+    const msgBuffer = new TextEncoder().encode(message);
+    const hashBuffer = await crypto.subtle.digest("SHA-256", msgBuffer);
+    const hashArray = Array.from(new Uint8Array(hashBuffer));
+    return hashArray.map((b) => b.toString(16).padStart(2, "0")).join("");
+  }
+
+  async function authenticateUser() {
+    // Already authenticated
+    if (localStorage.getItem("confirmation") === "true") {
+      document.documentElement.style.display = "block";
+      return;
+    }
+
+    while (true) {
+      const userInput = prompt("Please enter the passcode:");
+
+      if (userInput === null) {
+        document.write("<h1>Access Denied</h1>");
+        window.stop();
+        return;
       }
 
-      async function authenticateUser() {
-        let authenticated = false;
+      const hashedInput = await sha256(userInput);
 
-        while (!authenticated) {
-          let userInput = prompt("Please enter the passcode:");
-
-          if (userInput === null) {
-            document.write("<h1>Access Denied</h1>");
-            window.stop();
-            break;
-          }
-
-          const hashedInput = await sha256(userInput);
-
-          if (hashedInput === STORED_HASH) {
-            authenticated = true;
-            document.documentElement.style.display = "block";
-          } else {
-            alert("Incorrect passcode. Try again.");
-          }
-        }
+      if (hashedInput === STORED_HASH) {
+        localStorage.setItem("confirmation", "true");
+        document.documentElement.style.display = "block";
+        return;
       }
 
-      document.documentElement.style.display = "none";
-      window.onload = authenticateUser;
-    </script>
+      alert("Incorrect passcode. Try again.");
+    }
+  }
+
+  document.documentElement.style.display = "none";
+  window.onload = authenticateUser;
+</script>
   </head>
 
   <body>
