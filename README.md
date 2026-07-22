@@ -8,4 +8,4 @@ _Ausaaf Umar, Akshat Bharadwaj & Zeeshan Choudhury_
 * ~Auto-refresh~
 * Village-like look/design
 * Hovering news card highlights ticker\
-[Shortened URL](https://bit.ly/vc-banyan)
+  [Shortened URL](https://bit.ly/vc-banyan)
