@@ -1,3 +1,4 @@
+_This is a cleaned-up version of the code._\
 # VillageConnect
 A social network of sorts for a village.\
 A digital Banyan tree, or the Chaupal underneath it. 
