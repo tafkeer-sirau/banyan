@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Village Connect</title>
+
+  <link rel="stylesheet" href="../style.css" />
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+  />
+
+  <script src="../js/auth.js"></script>
+</head>
+
+<body>
+  <header>
+    <div class="logo">
+      <i class="fa-solid fa-tree"></i>
+      Village Connect
+    </div>
+
+    <nav>
+      <a href="sample.html">Home</a>
+      <a href="calendar.html">Calendar</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <h1>Management Site</h1>
+    <p>Update the village events and activities.</p>
+  </section>
+
+  <a href="calendar.html" class="link-plain">
+    <div class="ticker">
+      <div class="ticker-text">
+        Farmer's Market Sunday | Tree Plantation Drive | Cricket Tournament |
+        Water Supply Notice | Annual Village Fair
+      </div>
+    </div>
+  </a>
+
+  <div class="news">
+    <h2 class="month-title">Update</h2>
+    <textarea id="news" rows="8" cols="200"></textarea>
+  </div>
+
+  <div style="text-align: center">
+    <button id="spt">Start Speech</button>
+    <button id="news_b">Update</button>
+  </div>
+
+  <footer>
+    &copy; 2026 Village Connect
+    <a href="management.html">
+      Management Page
+      <div class="tooltip">For updating the news</div>
+    </a>
+  </footer>
+
+  <script src="../js/main.js"></script>
+</body>
+</html>

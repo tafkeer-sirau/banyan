@@ -1,0 +1,281 @@
+/* ==========================================================================
+   Reset & base
+   ========================================================================== */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: #f7f4ea;
+  padding-top: 70px; /* matches header's fixed height exactly - no gap, no overlap */
+}
+
+a {
+  color: #d8b25c;
+  text-decoration: none;
+}
+
+.link-plain {
+  color: black;
+}
+
+/* ==========================================================================
+   Header & nav
+   ========================================================================== */
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 70px;
+  padding: 0 50px;
+  background: #556b2f;
+  color: white;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+}
+
+nav a {
+  color: white;
+  margin-left: 20px;
+  text-decoration: none;
+}
+
+nav a:hover {
+  background: #faf8f2;
+  color: #d8b25c;
+}
+
+/* ==========================================================================
+   Hero
+   ========================================================================== */
+
+.hero {
+  text-align: center;
+  padding: 90px 20px;
+  background: #d8b25c;
+  color: white;
+}
+
+.hero button {
+  margin-top: 20px;
+  padding: 12px 28px;
+  border: none;
+  background: #556b2f;
+  color: white;
+  cursor: pointer;
+  border-radius: 8px;
+}
+
+/* ==========================================================================
+   News ticker
+   ========================================================================== */
+
+.ticker {
+  overflow: hidden;
+  background: #7c4a2d;
+  color: white;
+  padding: 12px;
+  white-space: nowrap;
+}
+
+.ticker-text {
+  display: inline-block;
+  padding-left: 100%;
+  animation: move 18s linear infinite;
+}
+
+@keyframes move {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+/* ==========================================================================
+   Home page cards
+   ========================================================================== */
+
+.cards {
+  padding: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 30px;
+  min-height: 50vh;
+}
+
+.card {
+  background: white;
+  padding: 25px;
+  text-align: center;
+  cursor: pointer;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
+}
+
+.card:hover {
+  background: #faf8f2;
+}
+
+.card i {
+  font-size: 45px;
+  margin-bottom: 15px;
+  color: #556b2f;
+}
+
+/* ==========================================================================
+   Footer
+   ========================================================================== */
+
+footer {
+  background: #556b2f;
+  color: white;
+  text-align: center;
+  padding: 20px;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+}
+
+footer a {
+  position: relative;
+  color: #d8b25c;
+}
+
+/* ==========================================================================
+   Community calendar
+   ========================================================================== */
+
+.calendar-section {
+  padding: 50px;
+}
+
+.month-title {
+  text-align: center;
+  color: #556b2f;
+  margin-bottom: 25px;
+  font-size: 2rem;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background: white;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
+}
+
+th {
+  background: #556b2f;
+  color: white;
+  padding: 15px;
+}
+
+td {
+  width: 14.28%;
+  height: 110px;
+  border: 1px solid #ddd;
+  vertical-align: top;
+  padding: 10px;
+}
+
+td:hover {
+  background: #faf8f2;
+}
+
+.date {
+  width: 38px;
+  height: 38px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  border-radius: 50%;
+  color: #444;
+  position: relative;
+}
+
+.has-event {
+  background: #d8b25c;
+  color: white;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.has-event:hover {
+  background: #c89d39;
+}
+
+/* Tooltip (used by both calendar dates and the footer's management link) */
+
+.tooltip {
+  position: absolute;
+  top: -48px;
+  left: 50%;
+  transform: translateX(15%);
+  width: 180px;
+  background: #556b2f;
+  color: white;
+  padding: 10px;
+  border-radius: 8px;
+  font-size: 13px;
+  line-height: 1.5;
+  visibility: hidden;
+  opacity: 0;
+  transition: 0.2s;
+  z-index: 100;
+  text-align: left;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
+}
+
+.tooltip strong {
+  display: block;
+  margin-bottom: 5px;
+  color: #d8b25c;
+}
+
+.has-event:hover .tooltip,
+footer a:hover .tooltip {
+  visibility: visible;
+  opacity: 1;
+}
+
+/* ==========================================================================
+   Management page
+   ========================================================================== */
+
+.news {
+  text-align: center;
+  padding: 40px;
+}
+
+#news_b,
+#spt {
+  background: #556b2f;
+  color: white;
+  padding: 15px;
+}
+
+textarea {
+  width: 50%;
+  height: 80px;
+  border: 1px solid #ddd;
+  vertical-align: top;
+  padding: 10px;
+}
