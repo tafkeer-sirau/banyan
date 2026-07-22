@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<HTML lang="en" style="display:none">
+<HEAD>
+	<META charset="UTF-8">
+	<META name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Protected Page</title>
+
+	<!-- <link rel="stylesheet" href="style.css"> -->
+
+	<script>
+		const STORED_HASH = "03ac674216f3e15c761ee1a5e255f067953623c8b388b4459e13f978d7c846f4";
+
+		const sha256 = async text =>
+			[...new Uint8Array(await crypto.subtle.digest("SHA-256", new TextEncoder().encode(text)))]
+				.map(b => b.toString(16).padStart(2, "0"))
+				.join("");
+
+		async function authenticate() {
+			while (true) {
+				const input = prompt("Enter passcode:");
+
+				if (input === null) {
+					document.body.innerHTML = "<h1>Access Denied</h1>";
+					document.documentElement.style.display = "";
+					return;
+				}
+
+				if (await sha256(input) === STORED_HASH) {
+					document.documentElement.style.display = "";
+					return;
+				}
+
+				alert("Incorrect passcode.");
+			}
+		}
+
+		window.addEventListener("load", authenticate);
+	</script>
+</HEAD>
+<BODY>
+	Protected Content.
+</BODY>
+</HTML>
