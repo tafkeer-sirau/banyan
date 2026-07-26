@@ -1,4 +1,4 @@
-_This is a cleaned-up version of the code._
+_हर गाँव अब जुड़ेगा, हर ग्रामीण सुनेगा। आपका चौपाल आपके फ़ोन पर!_
 # VillageConnect
 A social network of sorts for a village.\
 A digital Banyan tree, or the Chaupal underneath it. 
