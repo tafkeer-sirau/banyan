@@ -3,15 +3,13 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Village Connect</title>
+  <title>404 | Village Connect</title>
 
   <link rel="stylesheet" href="style.css" />
   <link
     rel="stylesheet"
     href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
   />
-
-  <script src="auth.js"></script>
 </head>
 
 <body>
@@ -28,28 +26,27 @@
   </header>
 
   <section class="hero">
-    <h1>Management Site</h1>
-    <p>Update the village events and activities.</p>
+    <h1>404</h1>
+    <p>Oops! The page you're looking for doesn't exist.</p>
+
+    <button onclick="location.href='sample.html'">Return Home</button>
   </section>
 
-  <a href="calendar.html" class="link-plain">
-    <div class="ticker">
-      <div class="ticker-text">
-        Farmer's Market Sunday | Tree Plantation Drive | Cricket Tournament |
-        Water Supply Notice | Annual Village Fair
+  <section class="calendar-section">
+    <div class="cards">
+      <div class="card">
+        <i class="fa-solid fa-triangle-exclamation"></i>
+        <h2>Page Not Found</h2>
+        <p>The page may have been removed, renamed, or the link you followed is incorrect.</p>
+      </div>
+
+      <div class="card">
+        <i class="fa-solid fa-house"></i>
+        <h2>Go Back Home</h2>
+        <p>Return to the Village Connect homepage and continue exploring community resources.</p>
       </div>
     </div>
-  </a>
-
-  <div class="news">
-    <h2 class="month-title">Update</h2>
-    <textarea id="news" rows="8" cols="200"></textarea>
-  </div>
-
-  <div style="text-align: center">
-    <button id="spt">Start Speech</button>
-    <button id="news_b">Update</button>
-  </div>
+  </section>
 
   <footer>
     &copy; 2026 Village Connect
@@ -58,7 +55,5 @@
       <div class="tooltip">For updating the news</div>
     </a>
   </footer>
-
-  <script src="main.js"></script>
 </body>
 </html>
