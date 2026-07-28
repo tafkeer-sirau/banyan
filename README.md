@@ -8,4 +8,8 @@ _Ausaaf Umar, Akshat Bharadwaj & Zeeshan Choudhury_
 * ~Add login-status local storage~
 * ~Auto-refresh~
 * Village-like look/design
-* Hovering news card highlights ticker
+* ~Hovering news card highlights ticker~
+* Integrate the various functions together
+* Add a hindi language option to the voice-to-text
+* Figure out how to only clear chat and not clear all of local storage
+* ~Translation~
