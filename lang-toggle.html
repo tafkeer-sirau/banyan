@@ -20,17 +20,17 @@
 
 <script>
   function toggleLang() {
-    var enSpan = document.getElementById("eng");
-    var hiSpan = document.getElementById("hin");
+    var eng = document.getElementById("eng");
+    var hin = document.getElementById("hin");
     var btn = document.getElementById("langBtn");
 
-    if (enSpan.style.display === "none") {
-      enSpan.style.display = "block";
-      hiSpan.style.display = "none";
+    if (eng.style.display === "none") {
+      eng.style.display = "block";
+      hin.style.display = "none";
       btn.textContent = "हिन्दी";
     } else {
-      enSpan.style.display = "none";
-      hiSpan.style.display = "block";
+      eng.style.display = "none";
+      hin.style.display = "block";
       btn.textContent = "English";
     }
   }
