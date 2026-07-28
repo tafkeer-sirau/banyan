@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Light/Dark Toggle</title>
+<style> 
+	:root {
+ 	--bg-color: #ffffff;	
+	--text-color: #1a1a1a;
+  	--button-bg: #eeeeee;
+ 	--button-text: #1a1a1a;
+	}
+
+	[data-theme="dark"] {
+  	--bg-color: #121212;
+	 --text-color: #f5f5f5;
+	--button-bg: #333333;
+	--button-text: #f5f5f5;
+	}
+
+	body {
+    	background-color: var(--bg-color);
+	color: var(--text-color);
+	font-family: sans-serif;
+ 	padding: 2rem;
+  	transition: background-color 0.3s ease, color 0.3s ease; 
+	}
+
+	button {
+	background-color: var(--button-bg);
+	color: var(--button-text);
+	border: none;
+ 	padding: 10px 20px;
+	cursor: pointer;
+	border-radius: 5px;
+	transition: background-color 0.3s ease, color 0.3s ease;
+	}
+</style>
+<script>
+	document.addEventListener("DOMContentLoaded", () => {
+		const toggleButton = document.getElementById('theme-toggle');
+  		const htmlElement = document.documentElement;
+		const savedTheme = localStorage.getItem('theme');
+
+ 		 if (savedTheme) {
+ 			htmlElement.setAttribute('data-theme', savedTheme);
+  		}
+
+ 		updateButtonText(savedTheme || "light");
+
+  		toggleButton.addEventListener('click', () => {
+    			const currentTheme = htmlElement.getAttribute('data-theme');
+    			const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+   			htmlElement.setAttribute('data-theme', newTheme);
+  			localStorage.setItem('theme', newTheme);
+   			updateButtonText(newTheme);
+		});
+
+  		function updateButtonText(theme) {
+   			toggleButton.textContent = theme === 'dark' ? 'Light Mode' : 'Dark Mode';
+  		}
+	});
+</script>
+</head>
+<body>
+	<header>
+	<button id="theme-toggle" aria-label="Toggle dark mode"> 	Dark Mode</button>
+	</header>
+</body>
+</html>
