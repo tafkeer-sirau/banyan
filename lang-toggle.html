@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<HTML>
+<HEAD>
+<title>Lang</title>
+<style>
+  #eng { display: block; }
+  #hin { display: none; }
+</style>
+</HEAD>
+<BODY>
+
+<button id="langBtn" onclick="toggleLang()">हिन्दी</button>
+
+<span id="eng">
+  <p>ENGLISH</p>
+</span>
+<span id="hin">
+  <p>हिन्दी</p>
+</span>
+
+<script>
+  function toggleLang() {
+    var enSpan = document.getElementById("eng");
+    var hiSpan = document.getElementById("hin");
+    var btn = document.getElementById("langBtn");
+
+    if (enSpan.style.display === "none") {
+      enSpan.style.display = "block";
+      hiSpan.style.display = "none";
+      btn.textContent = "हिन्दी";
+    } else {
+      enSpan.style.display = "none";
+      hiSpan.style.display = "block";
+      btn.textContent = "English";
+    }
+  }
+</script>
+
+</BODY>
+</HTML>
