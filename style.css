@@ -15,6 +15,7 @@ body {
   background-attachment: fixed;
   background-size: cover;
   padding-top: 70px;
+
 }
 
 a {
@@ -159,6 +160,7 @@ footer a {
 .calendar-section {
   padding: 100px;
   background: rgb(247, 244, 234);
+
 }
 
 .month-title {

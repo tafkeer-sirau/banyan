@@ -1,21 +1,19 @@
-<!DOCTYPE html>
-<html lang="en">
+<html>
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Village Connect</title>
+  <title>Chat</title>
 
   <link rel="stylesheet" href="style.css" />
-  <link
-    rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
-  />
+  <link rel="stylesheet" href="switch.css" />
+  <link rel="stylesheet" href="chat.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"  />
 
-  <script src="auth.js"></script>
 </head>
 
 <body>
-  <header>
+<header>
     <div class="logo">
       <i class="fa-solid fa-tree"></i>
       Village Connect
@@ -29,11 +27,9 @@
   </header>
 
   <section class="hero">
-    <h1>Management Site</h1>
-    <p>Update the village events and activities.</p>
+    <h1>Chat</h1>
+    <p>Talk to your heart's content</p>
   </section>
-
-
 
   <a href="calendar.html" class="link-plain">
     <div class="ticker">
@@ -43,20 +39,17 @@
       </div>
     </div>
   </a>
+<span class="calendar-section">
+<!-- <p id="clearLC" localStorage.removeItem('chat');>Clear Chat</p> -->
 
-
-<section class="calendar-section">
-  <div class="news">
-    <h2 class="month-title">Update</h2>
-    <textarea id="news" rows="8" cols="200"></textarea>
-  </div>
-
-  <div style="text-align: center">
-    <button id="spt">Start Speech</button>
-    <button id="news_b">Update</button>
-  </div>
-  
-  </section>
+<div id="container">
+    <div id="chatDisp"></div>
+    <div id="input">
+            <p id="typing">Typing...</p>
+            <label id="sendMessage" for="messageInput">Send</label>
+            <input id="messageInput" type="text">
+    </div>
+</div>
 
   <footer>
     &copy; 2026 Village Connect
@@ -66,6 +59,7 @@
     </a>
   </footer>
 
-  <script src="main.js"></script>
+</span>
+<script src="chat.js"></script>
+<script src="main.js"></script>
 </body>
-</html>
