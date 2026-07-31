@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>RuTour | Management</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+  <script src="auth.js"></script>
+</head>
+
+<body>
+<section id="eng">
+  <header>
+    <div class="logo">
+      <i class="fa-solid fa-tree"></i>
+      <a href="javascript:void(0)" onclick="toggleLang()" id="langBtn">हिं</a>
+      RuTour
+    </div>
+
+    <nav>
+      <a href="sample.html">Home</a>
+      <a href="calendar.html">Calendar</a>
+      <a href="chat.html">Bulletin Board</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <h1>Management Site</h1>
+    <p>Update the village events and activities.</p>
+  </section>
+
+  <a href="calendar.html" class="link-plain">
+    <div class="ticker">
+      <div class="ticker-text">
+        Farmer's Market Sunday | Tree Plantation Drive | Water Supply Notice | Annual Village Fair
+      </div>
+    </div>
+  </a>
+
+<section class="calendar-section">
+  <div class="news">
+    <h2 class="month-title">Update</h2>
+    <textarea id="news" rows="8" cols="200"></textarea>
+  </div>
+  <div style="text-align: center">
+    <button id="spt">Start Speech</button>
+    <button id="news_b">Update</button>
+  </div>
+</section>
+
+<footer>
+  &copy; 2026 RuTour
+  <a href="management.html">Management Page
+    <div class="tooltip">For updating the news.</div>
+  </a>
+</footer>
+</section>
+<section id="hin">
+  <header>
+    <div class="logo">
+      <i class="fa-solid fa-tree"></i>
+      <a href="javascript:void(0)" onclick="toggleLang()" id="langBtn">En</a>
+      रूतौर
+    </div>
+
+    <nav>
+      <a href="sample.html">मुख्य पृष्ठ</a>
+      <a href="calendar.html">कैलेंडर</a>
+      <a href="chat.html">बुलेटिन बोर्ड</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <h1>मैनेजमेंट पेज</h1>
+    <p>गांव के आयोजनों और गतिविधियों को अपडेट करें।</p>
+  </section>
+
+  <a href="calendar.html" class="link-plain">
+    <div class="ticker">
+      <div class="ticker-text">
+        रविवार का किसान बाज़ार | वृक्षारोपण अभियान | जलापूर्ति की सूचना | वार्षिक ग्राम मेला
+      </div>
+    </div>
+  </a>
+
+<section class="calendar-section">
+  <div class="news">
+    <h2 class="month-title">अपडेट</h2>
+    <textarea id="news" rows="8" cols="200"></textarea>
+  </div>
+  <div style="text-align: center">
+    <button id="spt">बोलना शुरू करें</button>
+    <button id="news_b">अपडेट</button>
+  </div>
+</section>
+
+<footer>
+    &copy; २०२६ रूतौर 
+    <a href="management.html"> मैनेजमेंट पेज  
+      <div class="tooltip">समाचार बदलने के लिए </div>
+    </a>
+  </footer>  
+</section> 
+
+<script src="main.js"></script>
+<script src="lang.js"></script>
+
+</body>
+</html>
